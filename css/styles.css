@@ -38,13 +38,33 @@ h1 {
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 40px; /* Increase padding for larger button */
     background: #4caf50;
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-top: 20px;
+    font-size: 24px; /* Increase font size */
+    border-radius: 10px; /* Rounded edges */
+    margin-top: 40px; /* Add space above the button */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Set max width */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Make button slightly smaller for tablets */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 22px;
+        padding: 18px 35px;
+    }
+}
+
+/* For very small mobile screens, make the button bigger */
+@media (max-width: 480px) {
+    .cta-button {
+        font-size: 26px;
+        padding: 25px 50px; /* Larger padding */
+    }
 }
 
 .services {
@@ -68,7 +88,7 @@ h1 {
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px);
+    width: calc(33% - 20px); /* For large screens */
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -102,12 +122,12 @@ footer p {
     }
 
     .cta-button {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 22px;
+        padding: 18px 35px;
     }
 
     .service-item {
-        width: calc(50% - 20px);
+        width: calc(50% - 20px); /* Two columns on tablet */
         margin: 10px;
     }
 
@@ -127,12 +147,12 @@ footer p {
     }
 
     .cta-button {
-        font-size: 14px;
-        padding: 6px 12px;
+        font-size: 26px;
+        padding: 25px 50px; /* Even larger padding */
     }
 
     .service-item {
-        width: 100%;
+        width: 100%; /* Stack items vertically on small screens */
     }
 
     footer p {
