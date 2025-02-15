@@ -14,14 +14,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduced padding */
     background: #2196f3; /* Blue Background */
     color: white;
 }
 
-.logo img {
-    max-width: 100px; /* Smaller Logo */
-    width: 100%;
+.header-container .logo {
+    display: flex;
+    align-items: center; /* Vertically align logo */
+    justify-content: flex-start; /* Align logo to the left */
+    flex: 0 1 auto; /* Prevent logo from expanding unnecessarily */
+    max-width: 80px; /* Set a smaller maximum width for the logo container */
+}
+
+.header-container .logo img {
+    max-width: 120px;  /* Smaller logo size */
+    height: auto;
+    width: auto; /* Maintain the aspect ratio */
+}
+
+/* Logo Styling */
+.footer-left {
+    display: flex;
+    align-items: center; /* Vertically align logo */
+    justify-content: flex-start; /* Align logo to the left */
+    flex: 0 1 auto; /* Prevent footer-left from expanding unnecessarily */
+    max-width: 120px; /* Set a maximum width for the footer-left */
+    height: auto;
+}
+
+.footer-left img {
+    max-width: 120px;  /* Smaller logo size */
+    height: auto;
+    width: auto; /* Keep the aspect ratio */
 }
 
 /* Title Styling */
@@ -120,29 +145,92 @@ h1, h2 {
     transform: scale(1.05);
 }
 
+/* Footer Section */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items to top to reduce vertical space */
+    padding: 10px 20px; /* Reduced padding for compact footer */
+    background-color: #2196f3; /* Blue Background */
+    color: white;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px; /* Reduced padding to save space */
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Center content horizontally */
+    padding: 5px;
+    height: 100%; /* Ensure it takes full height available */
+}
+
+.footer-center p {
+    margin: 5px 0; /* Add spacing between the two paragraphs */
+    font-size: 0.9em; /* Adjust font size */
+}
+
+.footer-right {
+    align-items: center; /* Center the contact section */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    width: auto;
+}
+
+.footer-address {
+    text-align: center;
+    margin-top: 5px; /* Reduced margin */
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.contact-us-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact-icons, .footer-icons {
-        flex-wrap: wrap;
-        gap: 10px;
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+        align-items: center; /* Center align items */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: none; /* Prevent flex-grow on smaller screens */
+        align-items: center;
+    }
+
+    .footer-icons {
+        justify-content: center; /* Center the icons */
+        width: auto;
+    }
+
+    .footer-left img {
+        max-width: 40px; /* Maintain small logo size on mobile */
     }
 }
 
 @media (max-width: 480px) {
     .icon {
-        font-size: 22px;
+        font-size: 22px; /* Smaller icon size for mobile */
     }
 }
 
-.header-address p, .footer-address p {
-    font-size: 0.8em; /* Small font size */
-    color: #666; /* Lighter text color */
-    margin-top: 10px;
-}
-
-/* Make sure the address in footer aligns well */
 .footer-address p {
-    font-size: 0.8em; /* Small font size */
-    color: #666;
-    margin-top: 10px;
+    font-size: 0.9em; /* Adjust font size */
+    color: #ffffff;
+    margin-top: 5px; /* Reduced margin */
 }
