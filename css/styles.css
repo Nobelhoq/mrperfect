@@ -162,7 +162,6 @@ h1, h2 {
     color: #666;
 }
 
-
 .service-item:hover {
     transform: scale(1.05);
 }
@@ -224,10 +223,17 @@ h1, h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
+    /* Stack header and footer content vertically */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        align-items: center; /* Center align items */
+    }
+    
+    .footer-container {
+        flex-direction: column; /* Stack footer items */
+        text-align: center;
+        align-items: center;
     }
 
     .footer-left, .footer-center, .footer-right {
@@ -243,11 +249,39 @@ h1, h2 {
     .footer-left img {
         max-width: 40px; /* Maintain small logo size on mobile */
     }
+
+    .service-item {
+        width: calc(50% - 40px); /* 2 items per row on medium screens */
+    }
+
+    .cta-button {
+        font-size: 22px; /* Smaller text for mobile */
+        padding: 15px 30px;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Stack service items in 1 column on smaller screens */
+    .service-item {
+        width: calc(100% - 40px); /* Full-width items on mobile */
+    }
+
     .icon {
         font-size: 22px; /* Smaller icon size for mobile */
+    }
+
+    /* Adjust button and header for mobile */
+    .cta-button {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
+    }
+
+    .hero p {
+        font-size: 1em;
     }
 }
 
