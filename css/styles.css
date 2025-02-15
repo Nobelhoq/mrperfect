@@ -114,32 +114,53 @@ h1, h2 {
     transform: scale(1.05);
 }
 
-/* Services */
+/* Services Section */
 .services {
     margin: 50px 0;
+    padding: 20px;
 }
 
 .services h2 {
     font-size: 2em;
+    margin-bottom: 30px;
 }
 
+/* Service Item Styling */
 .service-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .service-item {
     background: white;
-    padding: 15px;
-    margin: 10px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px);
+    width: calc(33% - 40px);
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+/* Service Images */
+.service-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Service Text */
+.service-item p {
+    font-size: 1em;
+    color: #666;
+}
+
 
 .service-item:hover {
     transform: scale(1.05);
