@@ -17,6 +17,7 @@ body {
     padding: 10px 20px; /* Reduced padding */
     background: #2196f3; /* Blue Background */
     color: white;
+    gap: 10px;
 }
 
 .header-container .logo {
@@ -254,4 +255,19 @@ h1, h2 {
     font-size: 0.9em; /* Adjust font size */
     color: #ffffff;
     margin-top: 5px; /* Reduced margin */
+}
+
+.language-button {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Reduced margin to bring the button closer to the icons */
+}
+
+.language-button:hover {
+    background-color: #d32f2f;
 }
