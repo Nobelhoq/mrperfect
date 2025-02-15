@@ -1,29 +1,60 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(to bottom, #ffffff, #4caf50, #2196f3);
+    background: #ffffff; /* White Background */
     color: #333;
     transition: opacity 1s ease-in-out;
 }
 
-header {
-    background: #2196f3;
+/* Header & Footer */
+.header-container, .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #2196f3; /* Blue Background */
     color: white;
-    padding: 20px;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 100px; /* Smaller Logo */
     width: 100%;
 }
 
-h1 {
-    font-size: 2em;
-    margin-top: 0;
+/* Title Styling */
+h1, h2 {
+    margin: 0;
+    text-align: center;
 }
 
+/* Social Icons */
+.contact-icons, .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #4caf50;
+}
+
+.whatsapp:hover {
+    color: #25D366;
+}
+
+/* Hero Section */
 .hero {
     padding: 50px 20px;
 }
@@ -36,54 +67,29 @@ h1 {
     font-size: 1.2em;
 }
 
+/* Call to Action Button */
 .cta-button {
     display: inline-block;
-    padding: 20px 40px; /* Increase padding for larger button */
+    padding: 20px 40px;
     background: #4caf50;
     color: white;
     text-decoration: none;
-    font-size: 24px; /* Increase font size */
-    border-radius: 10px; /* Rounded edges */
-    margin-top: 40px; /* Add space above the button */
-    width: 100%; /* Full width */
-    max-width: 500px; /* Set max width */
-    text-align: center; /* Center the text */
-    box-sizing: border-box; /* Include padding in width calculation */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect */
 .cta-button:hover {
-    background-color: #45a049; /* Darker shade of green */
-    transform: scale(1.05); /* Slightly enlarge the button */
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
-/* Make button slightly smaller for tablets */
-@media (max-width: 768px) {
-    .cta-button {
-        font-size: 22px;
-        padding: 18px 35px;
-    }
-
-    .cta-button:hover {
-        background-color: #45a049; /* Darker shade for hover */
-        transform: scale(1.05);
-    }
-}
-
-/* For very small mobile screens, make the button bigger */
-@media (max-width: 480px) {
-    .cta-button {
-        font-size: 26px;
-        padding: 25px 50px; /* Larger padding */
-    }
-
-    .cta-button:hover {
-        background-color: #45a049; /* Darker shade for hover */
-        transform: scale(1.05);
-    }
-}
-
+/* Services */
 .services {
     margin: 50px 0;
 }
@@ -105,7 +111,7 @@ h1 {
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(33% - 20px); /* For large screens */
+    width: calc(33% - 20px);
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -114,75 +120,29 @@ h1 {
     transform: scale(1.05);
 }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 20px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Media Query for Mobile Devices */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .hero h2 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        font-size: 22px;
-        padding: 18px 35px;
-    }
-
-    .cta-button:hover {
-        background-color: #45a049; /* Darker shade for hover */
-        transform: scale(1.05);
-    }
-
-    .service-item {
-        width: calc(50% - 20px); /* Two columns on tablet */
-        margin: 10px;
-    }
-
-    footer p {
-        font-size: 0.9em;
+    .contact-icons, .footer-icons {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
 
-/* Media Query for Small Mobile Devices */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.2em;
+    .icon {
+        font-size: 22px;
     }
+}
 
-    .hero h2 {
-        font-size: 1.3em;
-    }
+.header-address p, .footer-address p {
+    font-size: 0.8em; /* Small font size */
+    color: #666; /* Lighter text color */
+    margin-top: 10px;
+}
 
-    .cta-button {
-        font-size: 26px;
-        padding: 25px 50px; /* Even larger padding */
-    }
-
-    .cta-button:hover {
-        background-color: #45a049; /* Darker shade for hover */
-        transform: scale(1.05);
-    }
-
-    .service-item {
-        width: 100%; /* Stack items vertically on small screens */
-    }
-
-    footer p {
-        font-size: 0.8em;
-    }
+/* Make sure the address in footer aligns well */
+.footer-address p {
+    font-size: 0.8em; /* Small font size */
+    color: #666;
+    margin-top: 10px;
 }
