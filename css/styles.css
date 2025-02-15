@@ -49,6 +49,13 @@ h1 {
     max-width: 500px; /* Set max width */
     text-align: center; /* Center the text */
     box-sizing: border-box; /* Include padding in width calculation */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+/* Hover effect */
+.cta-button:hover {
+    background-color: #45a049; /* Darker shade of green */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 /* Make button slightly smaller for tablets */
@@ -57,6 +64,11 @@ h1 {
         font-size: 22px;
         padding: 18px 35px;
     }
+
+    .cta-button:hover {
+        background-color: #45a049; /* Darker shade for hover */
+        transform: scale(1.05);
+    }
 }
 
 /* For very small mobile screens, make the button bigger */
@@ -64,6 +76,11 @@ h1 {
     .cta-button {
         font-size: 26px;
         padding: 25px 50px; /* Larger padding */
+    }
+
+    .cta-button:hover {
+        background-color: #45a049; /* Darker shade for hover */
+        transform: scale(1.05);
     }
 }
 
@@ -126,6 +143,11 @@ footer p {
         padding: 18px 35px;
     }
 
+    .cta-button:hover {
+        background-color: #45a049; /* Darker shade for hover */
+        transform: scale(1.05);
+    }
+
     .service-item {
         width: calc(50% - 20px); /* Two columns on tablet */
         margin: 10px;
@@ -149,6 +171,11 @@ footer p {
     .cta-button {
         font-size: 26px;
         padding: 25px 50px; /* Even larger padding */
+    }
+
+    .cta-button:hover {
+        background-color: #45a049; /* Darker shade for hover */
+        transform: scale(1.05);
     }
 
     .service-item {
