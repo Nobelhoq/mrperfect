@@ -22,32 +22,32 @@ body {
 
 .header-container .logo {
     display: flex;
-    align-items: center; /* Vertically align logo */
-    justify-content: flex-start; /* Align logo to the left */
-    flex: 0 1 auto; /* Prevent logo from expanding unnecessarily */
-    max-width: 80px; /* Set a smaller maximum width for the logo container */
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 1 auto;
+    max-width: 80px;
 }
 
 .header-container .logo img {
-    max-width: 120px;  /* Smaller logo size */
+    max-width: 100px; /* Slightly smaller logo */
     height: auto;
-    width: auto; /* Maintain the aspect ratio */
+    width: auto;
 }
 
 /* Logo Styling */
 .footer-left {
     display: flex;
-    align-items: center; /* Vertically align logo */
-    justify-content: flex-start; /* Align logo to the left */
-    flex: 0 1 auto; /* Prevent footer-left from expanding unnecessarily */
-    max-width: 120px; /* Set a maximum width for the footer-left */
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 1 auto;
+    max-width: 120px;
     height: auto;
 }
 
 .footer-left img {
-    max-width: 120px;  /* Smaller logo size */
+    max-width: 100px;
     height: auto;
-    width: auto; /* Keep the aspect ratio */
+    width: auto;
 }
 
 /* Title Styling */
@@ -170,49 +170,49 @@ h1, h2 {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Align items to top to reduce vertical space */
-    padding: 10px 20px; /* Reduced padding for compact footer */
-    background-color: #2196f3; /* Blue Background */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2196f3;
     color: white;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .footer-left, .footer-center, .footer-right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px; /* Reduced padding to save space */
+    padding: 5px;
 }
 
 .footer-center {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    align-items: center;
     padding: 5px;
-    height: 100%; /* Ensure it takes full height available */
+    height: 100%;
 }
 
 .footer-center p {
-    margin: 5px 0; /* Add spacing between the two paragraphs */
-    font-size: 0.9em; /* Adjust font size */
+    margin: 5px 0;
+    font-size: 0.9em;
 }
 
 .footer-right {
-    align-items: center; /* Center the contact section */
+    align-items: center;
 }
 
 .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Reduced gap */
+    gap: 10px;
     width: auto;
 }
 
 .footer-address {
     text-align: center;
-    margin-top: 5px; /* Reduced margin */
-    font-size: 0.8em; /* Smaller font size */
+    margin-top: 5px;
+    font-size: 0.8em;
 }
 
 .contact-us-title {
@@ -223,54 +223,51 @@ h1, h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Stack header and footer content vertically */
     .header-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .footer-container {
-        flex-direction: column; /* Stack footer items */
+        flex-direction: column;
         text-align: center;
         align-items: center;
     }
 
     .footer-left, .footer-center, .footer-right {
-        flex: none; /* Prevent flex-grow on smaller screens */
+        flex: none;
         align-items: center;
     }
 
     .footer-icons {
-        justify-content: center; /* Center the icons */
+        justify-content: center;
         width: auto;
     }
 
     .footer-left img {
-        max-width: 40px; /* Maintain small logo size on mobile */
+        max-width: 40px;
     }
 
     .service-item {
-        width: calc(50% - 40px); /* 2 items per row on medium screens */
+        width: calc(50% - 40px); /* 2 items per row */
     }
 
     .cta-button {
-        font-size: 22px; /* Smaller text for mobile */
+        font-size: 22px;
         padding: 15px 30px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Stack service items in 1 column on smaller screens */
     .service-item {
-        width: calc(100% - 40px); /* Full-width items on mobile */
+        width: calc(100% - 40px); /* Full-width items */
     }
 
     .icon {
-        font-size: 22px; /* Smaller icon size for mobile */
+        font-size: 22px; /* Smaller icon size */
     }
 
-    /* Adjust button and header for mobile */
     .cta-button {
         font-size: 18px;
         padding: 15px 30px;
@@ -283,25 +280,22 @@ h1, h2 {
     .hero p {
         font-size: 1em;
     }
+
+    .footer-address p {
+        font-size: 0.9em;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+
+    .language-button {
+        background-color: red;
+        color: white;
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+    }
 }
 
-.footer-address p {
-    font-size: 0.9em; /* Adjust font size */
-    color: #ffffff;
-    margin-top: 5px; /* Reduced margin */
-}
-
-.language-button {
-    background-color: red;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-left: 10px; /* Reduced margin to bring the button closer to the icons */
-}
-
-.language-button:hover {
-    background-color: #d32f2f;
-}
