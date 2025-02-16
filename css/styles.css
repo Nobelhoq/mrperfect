@@ -162,10 +162,6 @@ h1, h2 {
     color: #666;
 }
 
-.service-item:hover {
-    transform: scale(1.05);
-}
-
 /* Footer Section */
 .footer-container {
     display: flex;
@@ -298,4 +294,3 @@ h1, h2 {
         margin-left: 10px;
     }
 }
-
