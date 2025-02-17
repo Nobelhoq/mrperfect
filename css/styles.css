@@ -287,7 +287,9 @@ h1, h2 {
     }
 
     .hero p {
-        font-size: 1em;
+        font-size: 0.9em; /* Reduce size slightly */
+        max-width: 90%; /* Avoid full width */
+        margin: 0 auto; /* Center the text */
     }
 
     .footer-address p {
