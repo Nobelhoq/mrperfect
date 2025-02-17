@@ -283,7 +283,9 @@ h1, h2 {
     }
 
     .hero h2 {
-        font-size: 1.4em;
+        font-size: 1.2em; /* Reduce the font size */
+        max-width: 90%; /* Prevent full-width stretch */
+        margin: 0 auto;
     }
 
     .hero p {
