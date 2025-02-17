@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #ffffff; /* White Background */
+    background: #ffffff;
     color: #333;
     transition: opacity 1s ease-in-out;
 }
@@ -14,8 +14,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Reduced padding */
-    background: #2196f3; /* Blue Background */
+    padding: 10px 20px;
+    background: #2196f3;
     color: white;
     gap: 10px;
 }
@@ -29,22 +29,6 @@ body {
 }
 
 .header-container .logo img {
-    max-width: 100px; /* Slightly smaller logo */
-    height: auto;
-    width: auto;
-}
-
-/* Logo Styling */
-.footer-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 0 1 auto;
-    max-width: 120px;
-    height: auto;
-}
-
-.footer-left img {
     max-width: 100px;
     height: auto;
     width: auto;
@@ -199,6 +183,11 @@ h1, h2 {
     align-items: center;
 }
 
+.footer-left img {
+    max-width: 80px;  /* Set a max width for the logo */
+    height: auto;     /* Maintain aspect ratio */
+}
+
 .footer-icons {
     display: flex;
     justify-content: center;
@@ -220,30 +209,53 @@ h1, h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        zoom: 1; /* Ensures no zooming in on mobile */
+    }
+
     .header-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
+    .header-container h1 {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 10px 0;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .footer-left, .footer-center, .footer-right {
         flex: none;
         align-items: center;
+        width: 100%;
+    }
+
+    .footer-left img {
+        max-width: 50px; /* Reduced logo size on mobile */
+        height: auto;
+    }
+
+    .footer-center h2 {
+        font-size: 0.8em; /* Smaller footer title */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .footer-icons {
         justify-content: center;
         width: auto;
-    }
-
-    .footer-left img {
-        max-width: 40px;
     }
 
     .service-item {
